@@ -436,6 +436,19 @@ sudo pmset -c sleep <valore-originale> disksleep <valore-originale> standby <val
 
 Verifica con `pmset -g` che i valori siano tornati quelli di partenza.
 
+### 11.1 Revoca l'App Password
+
+Una volta terminata l'operazione, **revoca l'App Password** creata al Capitolo 1 — non serve più e lasciarla attiva è un rischio di sicurezza inutile (chiunque la ottenesse avrebbe accesso in scrittura al tuo account, finché non viene revocata).
+
+1. Vai su **Impostazioni → Privacy e sicurezza → App Passwords**
+2. Trova la password usata (es. `skeeter-deleter`) e revocala
+
+Ricorda anche di ripulire le variabili d'ambiente dalla sessione corrente, se il Terminale resta aperto:
+
+```bash
+unset BLUESKY_USERNAME BLUESKY_PASSWORD
+```
+
 ---
 
 ## 12. Considerazioni per account con molti più elementi
